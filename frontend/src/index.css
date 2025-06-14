@@ -1,0 +1,63 @@
+@import "tailwindcss";
+.hide-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.gradient-1 {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom CSS for Navbar Dropdown Animation and Hover */
+
+/* Define the TranslateY animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above the final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the final position */
+  }
+}
+
+/* Base styles for dropdown menu items before animation starts */
+/* These properties are the 'from' state of the animation, and 'forwards' will ensure they stay */
+.services-dropdown-menu li .block {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Initially translated up */
+  /* Add a smooth transition for the hover background color */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Apply animation to individual items with staggering */
+/* The animation will trigger when the parent 'ul' becomes visible */
+.dropdown_item-1 {
+  animation: slideDown 0.3s ease-in-out forwards;
+  animation-delay: 0s; /* First item starts immediately */
+}
+
+.dropdown_item-2 {
+  animation: slideDown 0.3s ease-in-out forwards;
+  animation-delay: 0.08s; /* Staggered delay */
+}
+
+.dropdown_item-3 {
+  animation: slideDown 0.3s ease-in-out forwards;
+  animation-delay: 0.16s; /* Staggered delay */
+}
+
+/* Hover effect for individual dropdown list items */
+/* The background color change on hover */
+.services-dropdown-menu li:hover .block {
+  background-color: #2980b9; /* A distinct hover color for the items */
+  color: white; /* Ensure text color is readable on hover */
+}
