@@ -210,6 +210,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to="/services/resume-scanner"
+                      // Removed conflicting Tailwind hover classes
                       className="block px-4 py-2 text-sm text-gray-700 dark:text-white dropdown_item-1"
                       onClick={() => {
                         setisServicedropdownopen(false);
@@ -222,6 +223,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to="/services/interview-scheduler"
+                      // Removed conflicting Tailwind hover classes
                       className="block px-4 py-2 text-sm text-gray-700 dark:text-white dropdown_item-2"
                       onClick={() => {
                         setisServicedropdownopen(false);
@@ -234,6 +236,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to="/services/resume-personalizer" // Placeholder route
+                      // Removed conflicting Tailwind hover classes
                       className="block px-4 py-2 text-sm text-gray-700 dark:text-white dropdown_item-3"
                       onClick={() => {
                         setisServicedropdownopen(false);
